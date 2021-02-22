@@ -2,8 +2,8 @@
 	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
+  <groupId>fuzzing</groupId>
+  <artifactId>jqf-starter</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
@@ -16,12 +16,17 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
       <artifactId>owasp-java-html-sanitizer</artifactId>
       <version>20180219.1</version>
+    </dependency>
+    <dependency>
+      <groupId>edu.berkeley.cs.jqf</groupId>
+      <artifactId>jqf-maven-plugin</artifactId>
+      <version>1.6</version>
+      <type>maven-plugin</type>
     </dependency>
   </dependencies>
 
