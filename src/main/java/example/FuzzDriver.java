@@ -14,13 +14,28 @@ public class FuzzDriver {
 	FuzzDriver me = new FuzzDriver();
 	FileInputStream fis = null;
 	try {
-	    File inputFile = new File(args[1]);
+	    File inputFile = new File(args[0]);
 	    fis = new FileInputStream(inputFile);
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
 	me.fuzz(fis);
     }
+
+        private String stringfromIs(InputStream is)
+	throws IOException {
+
+	StringBuilder textBuilder = new StringBuilder();
+	try (Reader reader = new BufferedReader(new InputStreamReader
+						(is, Charset.forName(StandardCharsets.UTF_8.name())))) {
+	    int c = 0;
+	    while ((c = reader.read()) != -1) {
+		textBuilder.append((char) c);
+	    }
+	}
+	return textBuilder.toString();
+    }
+
 
     @Fuzz /* JQF will generate inputs to this method */
     public void fuzz(InputStream input)  {
