@@ -1,4 +1,4 @@
-export PROJECT_DIR=/home/ssmith/Projects/public
+export PROJECT_DIR=/home/user/Projects/public
 export AFL_HOME=$PROJECT_DIR/AFLplusplus
 export AFL_DIR=$AFL_HOME
 export JQF_HOME=$PROJECT_DIR/jqf
